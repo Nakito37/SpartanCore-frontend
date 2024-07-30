@@ -1,7 +1,43 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainComponent } from './pages/main/main.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { UserChannelComponent } from './pages/user-channel/user-channel.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '', 
+    redirectTo: '/main', 
+    pathMatch: 'full'
+  },
+  {
+    path: 'main',
+    component: MainComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'user-channel',
+    component: UserChannelComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
