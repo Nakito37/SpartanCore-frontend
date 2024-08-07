@@ -1,6 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+/* ANGULAR MATERIAL MODULES */
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+
+/* PRIMENG MODULES */
+import { ToolbarModule } from 'primeng/toolbar';
+import { AvatarModule } from 'primeng/avatar';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -15,12 +25,6 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { UploadContentComponent } from './components/upload-content/upload-content.component';
 import { HeadderComponent } from './components/headder/headder.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-
-/* ANGULAR MATERIAL MODULES */
-
-/* PRIMENG MODULES */
-
 
 
 @NgModule({
@@ -40,12 +44,17 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
 
     /* ANGULAR MATERIAL MODULES */
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatDividerModule,
 
     /* PRIMENG MODULES */
-
+    ToolbarModule,
+    AvatarModule
     
   ],
   providers: [

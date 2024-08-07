@@ -1,1 +1,35 @@
-<p>headder works!</p>
+<nav class="toolbar">
+    <div class="logo-title">
+      LOGO/TITLE
+    </div>
+    <div class="right-section">
+      <div class="nav-buttons">
+        <button mat-button (click)="navigateTo('/main')" [disabled]="activeButton === '/main'" [class.active]="activeButton === '/main'">Inicio</button>
+ <!--        <button mat-button>Training</button>
+        <button mat-button>Channels</button> -->
+        <button mat-button (click)="navigateTo('/login')">Iniciar sesión</button>
+        <button mat-button (click)="navigateTo('/register')">Registrarse</button>
+      </div>
+      <div class="profile-button">
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu" aria-label="User Profile">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu">
+          <div mat-menu-item disabled>
+            <mat-icon>account_circle</mat-icon>
+            <span>Usuario</span>
+          </div>
+          <mat-divider></mat-divider>
+          <button mat-menu-item (click)="navigateTo('/profile')">
+            <mat-icon>person</mat-icon>
+            <span>Ver perfil</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Cerrar sesión</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </nav>
+  
